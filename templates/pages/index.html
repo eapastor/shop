@@ -1,0 +1,49 @@
+{{ define "content" }}
+<div class="container">
+    <div class="well well-sm">
+        <strong>Category Title</strong>
+        <div class="btn-group">
+            <a href="#" id="list" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-th-list">
+            </span>List</a> <a href="#" id="grid" class="btn btn-default btn-sm"><span
+                class="glyphicon glyphicon-th"></span>Grid</a>
+        </div>
+    </div>
+    <div id="products" class="row list-group">
+         {{ range $value := .products }}
+        <div class="item  col-xs-3 col-lg-3">
+            <div class="thumbnail">
+                <h4 class="title group inner list-group-item-heading">
+                    {{$value.Title}}</h4>
+                <div class="caption">
+                    <img class="image group list-group-image" src="/assets/images/{{$value.Image}}" alt="" />
+                    <p class="showID">
+                        {{$value.ID}}</p>
+                    <p class="group inner list-group-item-text">
+                        {{$value.Description}}</p>
+                    <p class="price lead">
+                        {{$value.Price}} ₽</p>
+                    <div class="add2cart">
+                        <div>
+                            <input type="hidden" value="{{$value.ID}}" class="item_id">
+                            <div class="input-group">
+                                <input type="number" class="amp form-control" value="1">
+                                <div class="input-group-btn">
+                                    <button class="inCart-btn btn btn-success btn-group" inCart=0 type="submit">
+                                        <span class="inCart-btn-text glyphicon glyphicon-shopping-cart" aria-hidden="true">
+                                            В КОРЗИНУ
+                                        </span>
+                                    </button>
+                                    <br>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{ else }}
+        <p> No items it this category </p>
+        {{ end }}
+    </div>
+</div>
+{{ end }}
