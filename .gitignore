@@ -31,3 +31,6 @@ _testmain.go
 # external packages folder
 vendor/
 
+.idea/inspectionProfiles/
+.idea/libraries/GOPATH__shop_.xml
+libs/adapter/
