@@ -9,7 +9,6 @@
       <root url="file://$PROJECT_DIR$/../../../sourcegraph.com" />
       <root url="file://$PROJECT_DIR$/../.." />
     </CLASSES>
-    <JAVADOC />
     <SOURCES>
       <root url="file://$PROJECT_DIR$/../../../local" />
       <root url="file://$PROJECT_DIR$/../../../bitbucket.org" />

@@ -18,7 +18,7 @@ $(document).ready(function() {
 
         if ($(this).attr('inCart') == 0){
             $(this).attr('inCart', 1);
-            $(this).children('.inCart-btn-text')[0].innerText = '                                            В КОРЗИНЕ                                        '
+            $(this).children('.inCart-btn-text')[0].innerText = 'В КОРЗИНЕ'
             $(this).toggleClass('btn-success', 'btn-default')
             console.log('id:', $(this).children('.item_id').val(), 'amp:', $(this).children('.amp').val())
             var jqxhr = $.post( '/cart', { id: $(this).children('.item_id').val(), amp: $(this).children('.amp').val() }, function(data) {
